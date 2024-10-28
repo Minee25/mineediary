@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minee Diary</title>
+  <link rel="icon" type="image/x-icon" href="./assets/img/dinosaur.png">
+  <link href="./css/output.css" rel="stylesheet">
+
+  <!-- cdn icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-minee-bg font-kanit">
+
+  <!-- banner -->
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex flex-col items-center">
+      <div
+        class="bg-[#1b2838] w-full max-w-[512px] mt-4 rounded-lg p-4 shadow-sm shadow-[#1b2838] flex flex-col items-center">
+        <div class="p-4">
+          <img class="h-24 object-cover" src="./assets/img/dinosaur.png" alt="banner">
+        </div>
+        <h1 class="text-xl font-medium text-minee-text-white">เรื่องราวความทรงจำต่างๆ ของฉัน</h1>
+        <p class="text-base font-light text-minee-text-white">นี่ก็ผ่านมาแล้ว <span id="day-passed"></span> วันสินะ</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact -->
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex flex-col items-center">
+      <div class="bg-[#1b2838] w-full max-w-[512px] mt-4 rounded-lg p-4 shadow-sm shadow-[#1b2838] flex flex-col">
+        <h1 class="text-xl font-medium text-minee-text-white">ติดต่อฉัน</h1>
+        <div class="flex mt-2">
+          <a href="https://www.facebook.com/profile.php?id=100013052448629" target="_blank"
+            class="text-minee-text-white text-xl mr-4"><i
+              class="fa-brands fa-facebook-f text-blue-600 mr-1 text-2xl"></i>Thaksin</a>
+          <a href="https://www.instagram.com/oxkqz._25/" target="_blank" class="text-minee-text-white text-xl"><i
+              class="fa-brands fa-instagram text-pink-600 mr-1 text-2xl"></i>Oxkqz.25</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music -->
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex flex-col items-center">
+      <div class="bg-[#1b2838] w-full max-w-[512px] mt-4 rounded-lg p-4 shadow-sm shadow-[#1b2838] flex flex-col">
+        <div class="flex items-center">
+          <div class="flex sm:items-center flex-col sm:flex-row">
+            <img src="./assets/img/อยากเจอ.jpg" alt="sic" class="h-36 w-36 sm:h-24 sm:w-24 object-cover rounded-lg">
+            <div class="flex flex-col mt-2 sm:mt-0 sm:ml-4">
+              <h1 class="text-minee-text-white text-lg">อยากเจอ</h1>
+              <p class="text-minee-text-sec">Blue Shade</p>
+            </div>
+          </div>
+          <div class="flex items-center ml-auto cursor-pointer" id="music">
+            <audio id="music-player" style="display: none;">
+              <source src="./assets/sic/อยากเจอ.mp3" type="audio/mpeg">
+            </audio>
+            <div id="sound-wave-box" style="display: none;" class="items-center h-10">
+              <div class="sound-wave-bar bg-[#cccccc] h-full w-[7px] rounded-full mx-[3px] block"></div>
+              <div class="sound-wave-bar bg-[#cccccc] h-full w-[7px] rounded-full mx-[3px] block"></div>
+              <div class="sound-wave-bar bg-[#cccccc] h-full w-[7px] rounded-full mx-[3px] block"></div>
+              <div class="sound-wave-bar bg-[#cccccc] h-full w-[7px] rounded-full mx-[3px] block"></div>
+              <div class="sound-wave-bar bg-[#cccccc] h-full w-[7px] rounded-full mx-[3px] block"></div>
+              <div class="sound-wave-bar bg-[#cccccc] h-full w-[7px] rounded-full mx-[3px] block"></div>
+              <div class="sound-wave-bar bg-[#cccccc] h-full w-[7px] rounded-full mx-[3px] block"></div>
+            </div>
+            <i id="music-control" class="fa-solid fa-play text-5xl ml-2 mr-4 text-minee-text-sec"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- welcome -->
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex flex-col items-center">
+      <div class="w-full max-w-[512px] mt-4 rounded-lg p-4 flex flex-col items-center text-center">
+        <h1 class="text-xl font-medium text-minee-text-white">ไดอะรี่ของฉัน เพื่อความทรงจำที่อยากเก็บไว้ตลอดไป</h1>
+        <p class="text-base font-light text-minee-text-white">ดีใจนะที่เราได้พบเจอกันอีกครั้ง</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex flex-col items-center">
+      <div class="bg-[#1b2838] w-full max-w-[512px] mt-4 rounded-lg p-4 shadow-sm shadow-[#1b2838] flex flex-col">
+        <h1 class="text-sm font-medium text-minee-text-sec mb-1">28/10/2024 03:22</h1>
+        <div class="flex flex-col">
+          <p class="text-minee-text-white">ไดอะรี่แรกของฉัน จริงๆแล้วฉันยังทำไม่เสร็จเลยเหลือระบบฐานข้อมูลหนะ
+            เพราะว่าฉันกำลังศึกษาอยู่ยังไงละฮ่าๆ ไว้ฉันทำเสร็จเมื่อไหร่เดี๋ยวฉันจะมาอัพเดทอีกทีนะ</p>
+        </div>
+        <div class="flex mt-2 items-center text-minee-text-sec cursor-pointer">
+          <i class="fa-solid fa-heart text-2xl"></i>
+          <p class="ml-2 text-2xl">0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="container mx-auto px-4 md:px-0 mt-4">
+    <!-- No content -->
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
