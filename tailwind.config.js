@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "minee-blue": '#0075f7',
-        "minee-blue2": '#3DA5D9',
-        "minee-blue3": '#4A90E2',
+        "minee-blue-primary": '#213D5A',
+        "minee-blue-secondary": '#4E6E94', 
         "minee-text-white": '#E1F0FF',
         "minee-text-sec": '#999',
         "minee-bg": '#000C1D',
